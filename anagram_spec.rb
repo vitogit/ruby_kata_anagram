@@ -18,4 +18,14 @@ describe "anagram" do
     end
   end
 
+  context "word with 4 letter" do
+    it "return anagrams" do
+      expect(anagram 'biro').to match_array(['biro', 'bior', 'brio', 'broi', 
+                                      'boir', 'bori','ibro' ,'ibor' ,
+                                      'irbo' ,'irob' ,'iobr' ,'iorb',
+                                      'rbio' ,'rboi' ,'ribo' ,'riob' ,
+                                      'roib' ,'robi','obir' ,'obri' ,
+                                      'oibr' ,'oirb' ,'orbi','orib'])
+    end
+  end
 end

@@ -2,7 +2,10 @@ def anagram (word)
   return [word] if word.size==1
   ret = []
   word.chars.each_with_index do |letter, i|
-    ret << letter+rest_of_word(word, i)
+    anagram_rest = anagram(rest_of_word(word, i))
+    anagram_rest.each do |word|
+      ret << (letter + word) 
+    end    
   end
   ret  
 end
